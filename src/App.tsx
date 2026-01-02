@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { handleCalc } from './bmi';
 import './App.css'
 
 function App() {
