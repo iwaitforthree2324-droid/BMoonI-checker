@@ -47,7 +47,7 @@ function App() {
         {bmi !== null && (
           <p>
             <div className='showResult'>あなたの月でのBM<span className='oon'>oon</span>Iは<strong>{bmi.toFixed(1)}</strong>です</div><br></br>
-            <div className='kome'>※BM<span className='oon'>oon</span>Iは身長[cm]/(月での体重[kg])^2で算出されます</div>
+            <div className='kome'>※BM<span className='oon'>oon</span>Iは月での体重[kg]/(身長[m])^2で算出されます</div>
           </p>
         )}
       </div>  
