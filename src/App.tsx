@@ -42,11 +42,11 @@ function App() {
           </div>
         </div>
 
-        <button onClick={handleCalc}>BMI計算</button>
+        <button onClick={handleCalc}>BM<span className='oon'>oon</span>I計算</button>
 
         {bmi !== null && (
           <p>
-            <div className='showResult'>あなたの月でのBMIは<strong>{bmi.toFixed(1)}</strong>です</div><br></br>
+            <div className='showResult'>あなたの月でのBM<span className='oon'>oon</span>Iは<strong>{bmi.toFixed(1)}</strong>です</div><br></br>
             <div className='kome'>※BM<span className='oon'>oon</span>Iは身長[cm]/(月での体重[kg])^2で算出されます</div>
           </p>
         )}
