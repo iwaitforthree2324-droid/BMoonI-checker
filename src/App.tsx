@@ -26,31 +26,32 @@ function App() {
   }
 
   return (
-    <div>
-      <h1>
-        BM<span className = 'oon'>oon</span>I checker
-      </h1>
-      <div>
-        <label>
-          身長(cm):
-          <input type="number" value={height} onChange={(e) => setHeight(e.target.value)} />
-        </label>
-      </div>
-      <div>
-        <label>
-          体重(kg):
-          <input type="number" value={weight} onChange={(e) => setWeight(e.target.value)} />
-        </label>
-      </div>
+    <div className='container'>
+      <div className='card'>
+        <h1>
+          BM<span className = 'oon'>oon</span>I checker
+        </h1>
+        <div className='form'>
+          <div className='input'>
+            <label className='label'>身長[cm]：</label>
+              <input type="number" value={height} onChange={(e) => setHeight(e.target.value)} />
+          </div>
+          <div className='input'>
+            <label className='label'>地球での体重[kg]：</label>
+              <input type="number" value={weight} onChange={(e) => setWeight(e.target.value)} />
+          </div>
+        </div>
 
-      <button onClick={handleCalc}>計算</button>
+        <button onClick={handleCalc}>BMI計算</button>
 
-      {bmi !== null && (
-        <p>
-          あなたの月でのBMIは<strong>{bmi.toFixed(1)}</strong>です
-        </p>
-      )}
-    </div>  
+        {bmi !== null && (
+          <p>
+            <div className='showResult'>あなたの月でのBMIは<strong>{bmi.toFixed(1)}</strong>です</div><br></br>
+            <div className='kome'>※BM<span className='oon'>oon</span>Iは身長[cm]/(月での体重[kg])^2で算出されます</div>
+          </p>
+        )}
+      </div>  
+    </div>
   )
 }
 
